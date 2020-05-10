@@ -1,5 +1,6 @@
 import math
-def binom(n, k):
+
+def binom(n, k):                        # binomial coefficient
     if k == 1 or k == n:
         return 1
     if k > n:
@@ -10,6 +11,6 @@ def binom(n, k):
 n = float(input("white: "))
 m = float(input("black: "))
 k = float(input("how much will be drawn: "))
-summ = binom (n + m, k)
-result = binom(n,k) + binom(m,k)
-print(result / summ)
+summ = binom (n + m, k)                  # all the ways to draw k balls form n+m balls
+result = binom(n,k) + binom(m,k)         # all the ways to draw k balls from n (white) and m (black) ones
+print(result / summ)                     # the propability
