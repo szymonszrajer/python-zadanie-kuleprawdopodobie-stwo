@@ -1,0 +1,15 @@
+import math
+def binom(n, k):
+    if k == 1 or k == n:
+        return 1
+    if k > n:
+        return 0
+    else:
+        return math.factorial(n) // math.factorial(k) // math.factorial(n - k)
+
+n = float(input("white: "))
+m = float(input("black: "))
+k = float(input("how much will be drawn: "))
+summ = binom (n + m, k)
+result = binom(n,k) + binom(m,k)
+print(result / summ)
